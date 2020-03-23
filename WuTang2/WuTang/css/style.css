@@ -1,3 +1,88 @@
-h1 {
+
+/*Tutorials Used For CSS
+
+https://www.youtube.com/watch?v=vqCrQScnqV8&feature=youtu.be
+             &&
+
+https://codepen.io/Huhtamaki*/
+
+h2 {
   color: pink;
 }
+body {
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #261514;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+form {
+  color: white;
+  text-align: center;
+  margin: 25px 20% 25px 20%;
+  border-radius: 20px;
+}
+button {
+
+  padding: 15px 30px;
+  background-color: #261514;
+  overflow: hidden;
+  transform: 0.2s;
+  border-radius: 20px;
+  color: pink;
+}
+
+button:hover{
+  box-shadow: 
+    0 0 10px #EA9E8D,
+    0 0 40px #EA9E8D,
+    0 0 80px #EA9E8D,
+    0 0 200px #EA9E8D;
+  color: #D64550;
+  background-color: #EA9E8D;
+}
+
+
+.block {
+	position: relative;
+	margin: 20px auto 0;
+	width: 750px;
+	height: 500px;
+	background: linear-gradient(45deg, #261514, #272727);
+  border-radius: 10px;
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #D64550, #0000ff, #00ff00,#D64550, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: slidein 30s linear infinite;
+}
+
+@keyframes slidein {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+
